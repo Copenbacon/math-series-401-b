@@ -23,3 +23,15 @@ def lucas(n):
     else:
         return lucas(n - 1) + lucas(n - 2)
     return n
+
+
+def sum_series(n, k=0, l=1):
+    """Sum Series Sequence with optional parameters k and l."""
+    if n < 0:
+        return None
+    elif n == 0:
+        return k
+    elif n == 1:
+        return l
+    else:
+        return sum_series(n - 1, k, l) + sum_series(n - 2, k, l)
