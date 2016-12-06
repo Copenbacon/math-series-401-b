@@ -35,3 +35,15 @@ def sum_series(n, k=0, l=1):
         return l
     else:
         return sum_series(n - 1, k, l) + sum_series(n - 2, k, l)
+
+
+if __name__ == "__main__":
+    print(fibonacci.__doc__)
+    print('fibonacci(2) = ')
+    print(fibonacci(2))
+    print(lucas.__doc__)
+    print('lucas(2) = ')
+    print(lucas(2))
+    print(sum_series.__doc__)
+    print('sum_series(2) = ')
+    print(sum_series(2))
