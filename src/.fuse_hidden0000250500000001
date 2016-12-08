@@ -1,14 +1,14 @@
 """Testing Series.py."""
 import pytest
 
-FIBONACCI_TABLE = [
+PARAMS_TABLE = [
     [0, 0],
     [1, 1],
     [2, 1],
     [3, 2],
 ]
 
-LUCAS_TABLE = [
+PARAMS_TABLE2 = [
     [0, 2],
     [1, 1],
     [2, 3],
@@ -19,7 +19,7 @@ LUCAS_TABLE = [
     [7, 29],
 ]
 
-SUM_TABLE = [
+PARAMS_TABLE3 = [
     [0, 0, 0, 0],
     [1, 0, 1, 1],
     [2, 0, 1, 1],
@@ -27,24 +27,29 @@ SUM_TABLE = [
     [4, 0, 1, 3],
     [0, 2, 1, 2],
     [4, 2, 1, 7],
+    [5, 2, 1, 11],
+    [6, 2, 1, 18],
+    [7, 2, 1, 29],
+    [8, 2, 1, 47],
+    [9, 2, 1, 76],
 ]
 
 
-@pytest.mark.parametrize("n, result", FIBONACCI_TABLE)
+@pytest.mark.parametrize("n, result", PARAMS_TABLE)
 def test_fibonacci(n, result):
     """Test the fibonacci with input n."""
     from series import fibonacci
     assert fibonacci(n) == result
 
 
-@pytest.mark.parametrize("n, result", LUCAS_TABLE)
+@pytest.mark.parametrize("n, result", PARAMS_TABLE2)
 def test_lucas(n, result):
     """Test the fibonacci with input n."""
     from series import lucas
     assert lucas(n) == result
 
 
-@pytest.mark.parametrize("n, k, l, result", SUM_TABLE)
+@pytest.mark.parametrize("n, k, l, result", PARAMS_TABLE3)
 def test_sum_series(n, k, l, result):
     """Test the fibonacci with input n."""
     from series import sum_series
