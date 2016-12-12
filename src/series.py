@@ -3,7 +3,9 @@
 
 def fibonacci(n):
     """Fibonacci Sequence."""
-    if n == 1:
+    if n < 0:
+        return 'Not a valid number!'
+    elif n == 1:
         return 1
     elif n == 0:
         return 0
@@ -15,8 +17,8 @@ def fibonacci(n):
 def lucas(n):
     """Lucas sequence."""
     if n < 0:
-        print('Not a valid number!')
-    if n == 0:
+        return 'Not a valid number!'
+    elif n == 0:
         return 2
     elif n == 1:
         return 1
@@ -28,7 +30,7 @@ def lucas(n):
 def sum_series(n, k=0, l=1):
     """Sum Series Sequence with optional parameters k and l."""
     if n < 0:
-        print('Not a valid number!')
+        return 'Not a valid number!'
     elif n == 0:
         return k
     elif n == 1:
